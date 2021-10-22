@@ -14,7 +14,6 @@
 3. touch server.js
 4. setup nodemon
 5. start writing server file
-6.
 
 ## Server.js
 
