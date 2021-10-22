@@ -4,7 +4,7 @@ const ctx = {};
 
 ctx.authenticateToken = function(req, res, next) {
 
-  const authHeader = req.headers.authorization;
+  const authHeader = req?.headers?.authorization;
   let token = authHeader?.split(" ")?.[1] || "";
   if(!token){
     //Unauthorised
