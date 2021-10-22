@@ -21,6 +21,7 @@ const users = require('./data');
 app.use('/', require("./controllers/index"));
 app.use('/posts', require("./controllers/posts"));
 app.use('/login', require("./controllers/login"));
+app.use('/users', require("./controllers/users"));
 
 //To get SECRET
 //1. node

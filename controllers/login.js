@@ -1,19 +1,16 @@
 const express = require('express');
 const router = express.Router();
-//4. Require JWT
-const jwt = require("jsonwebtoken");
 const Login = require("../models/login");
+const jwt = require("./jwt");
 
-//curl -X POST -H "Content-Type: application/json" -d '{"username":"Kyle"}' http://localhost:3000/login/
+//curl -X POST -H "Content-Type: application/json" -d '{"email":"Kyle"}' http://localhost:3000/login/
 router.post('/',(req,res)=>{
   //Authenticate user
 
-  const username = req.body.username;
-  const user = { name: username };
+  const user = { name: req.body.email };
 
   //take payload and seralize
-  const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET);
-  res.json({ accessToken: accessToken });
+  res.json({ accessToken: jwt.generateToken(user) });
 })
 
 module.exports = router

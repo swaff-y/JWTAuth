@@ -1,11 +1,11 @@
 const data = [
   {
-    username: "Kyle",
-    title: "Post 1"
+    email: "kyle@swaff.id.au",
+    password: "xxx"
   },
   {
-    username: "Bob",
-    title: "Post 2"
+    email: "bob@sled.com",
+    password: "xxx"
   }
 ];
 
