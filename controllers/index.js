@@ -7,8 +7,4 @@ router.get("/", (req,res) => {
   res.render("index.ejs", { name: "Swaff-y" });
 })
 
-function checkAuthenticated(req, res, next){
-  next()
-}
-
 module.exports = router

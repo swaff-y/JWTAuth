@@ -4,7 +4,7 @@ const Users = require("../models/users");
 const jwt = require("./jwt");
 const bcrypt = require("bcrypt");
 
-//curl http://localhost:3000/users
+//curl -X GET -H 'authorization: Bearer xxx' http://localhost:3000/users
 router.get("/", jwt.authenticateToken, (req,res) => {
   res.json(Users.all)
 });

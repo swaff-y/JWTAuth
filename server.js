@@ -19,7 +19,6 @@ const users = require('./data');
 
 //controllers
 app.use('/', require("./controllers/index"));
-app.use('/posts', require("./controllers/posts"));
 app.use('/login', require("./controllers/login"));
 app.use('/users', require("./controllers/users"));
 
